@@ -1,0 +1,241 @@
+/**************** GENERAL SECTION ****************/
+
+* {
+  box-sizing: border-box;
+  /* border: 1px solid black; */
+  font-family: "Roboto", sans-serif;
+}
+
+html {
+  font-family: inherit;
+  font-size: 16px;
+  width: 100%;
+}
+
+:root {
+  --body-color: #f5f5f5;
+  --text-color: #333;
+  --main-color: #d1d3d6;
+  --frame-color: #4a4a4a;
+  --selection-color: #7fb3d5;
+  --emphasis-color: #5e6e80;
+  --href-active-color: #3b5998;
+  --href-visited-color: #6a5acd;
+}
+
+body {
+  margin: 0;
+  color: var(--text-color);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Montserrat", "Roboto", sans-serif;
+  color: var(--frame-color);
+}
+
+/* coler switching for selected content */
+::selection {
+  background-color: var(--selection-color);
+  color: var(--body-color);
+}
+
+@media screen and (min-width: 786px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  html {
+    font-size: 20px;
+  }
+  .main {
+    background-color: var(--main-color);
+  }
+}
+
+/****************  HEADER SECTION ****************/
+
+.header {
+  position: relative;
+  background-image: linear-gradient(
+    to bottom,
+    var(--frame-color) 0%,
+    var(--body-color) 30%
+  );
+  padding: 1.2rem;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.badge-hire-me {
+  position: absolute;
+  top: 0.3rem;
+  right: 0.3rem;
+  background-color: var(--emphasis-color);
+  padding: 0.6rem;
+  border-radius: 5%;
+  font-size: 0.9rem;
+  transition: background-color 0.5s, color 1s, transform 0.5s;
+  transition-timing-function: ease-out, ease-out;
+}
+
+.header:hover .badge-hire-me {
+  background-color: var(--href-active-color);
+  color: var(--body-color);
+  transform: translate(-15px, 15px) scale(1.2);
+}
+
+@media screen and (min-width: 992px) {
+  .badge-hire-me {
+    position: fixed;
+  }
+}
+
+.header-summary {
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+.header-title {
+  font-size: 1em;
+}
+
+.header-profession {
+  font-size: 0.6em;
+}
+
+.header p::after {
+  content: " 💪";
+}
+
+.header-nav {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1.8rem;
+}
+
+@media screen and (min-width: 768px) {
+  .header-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+.nav-href {
+  width: auto;
+  margin: 0.5rem;
+  padding: 0.2rem;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: background-color 0.5s;
+  transition-timing-function: ease-in-out;
+}
+
+.nav-href:link {
+  color: var(--text-color);
+}
+
+.nav-href:hover {
+  background-color: var(--href-visited-color);
+}
+
+.nav-href:active {
+  color: var(--href-active-color);
+}
+
+.nav-href:visited {
+  color: var(--href-visited-color);
+}
+
+.nav-href:focus {
+  outline-style: dotted;
+}
+
+/* .header > p {
+  font-size: 1.2rem;
+} */
+
+@media print {
+  .badge-hire-me,
+  .header-nav {
+    display: none;
+  }
+}
+
+/**************** MAIN SECTION ****************/
+
+.article {
+  padding: 1rem;
+}
+
+.main {
+  display: block;
+  max-width: 60ch;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.article + .article {
+  margin-top: 2rem;
+  border-top: 0.08rem solid var(--frame-color);
+}
+
+@media screen and (min-width: 786px) {
+  .article + .article {
+    margin-top: 6rem;
+  }
+}
+
+li + li {
+  margin-top: 0.625rem;
+}
+
+.article-heading {
+  position: relative;
+  right: 0.8rem;
+  color: var(--frame-color);
+  font-size: 1.5rem;
+}
+
+.experience-heading {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 768px) {
+  .experience-heading {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.experience-position .experience-period {
+  display: inline-block;
+}
+
+@media screen and (min-width: 768px) {
+  .article {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/**************** FOOTER SECTION ****************/
+
+.footer-note {
+  text-align: center;
+  color: var(--text-color);
+  font-size: 2rem;
+  background-image: linear-gradient(
+    to bottom,
+    var(--body-color) 30%,
+    var(--frame-color) 90%
+  );
+  padding: 3rem;
+}

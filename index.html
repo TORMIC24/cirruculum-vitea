@@ -4,13 +4,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cirriculum Vitea</title>
+    <title>Personal Website</title>
     <meta name="author" content="Torsten Michalek">
     <meta name="description" content="Cirriculum Vitea">
+    <link rel="stylesheet" href="node_modules/modern-normalize/modern-normalize.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="header-summary">
+            <h1 class="header-title">Max Mustermann</h1>
+            <p class="header-profession">Webdeveloper</p>
+        </div>
+        <nav class="header-nav">
+            <a class="nav-href" href="#profile">Profile</a>
+            <a class="nav-href" href="#experience">Experiences</a>
+            <a class="nav-href" href="#skills">Skills</a>
+            <a class="nav-href" href="#contact">Contact</a>
+        </nav>
+        <aside class="badge-hire-me">
+            Hire me!
+        </aside>
+    </header>
+    <!-- MAIN -->
+    <main class="main">
+        <article id="profile" class="article">
+            <h2 class="article-heading">Profile</h2>
+            <p>
+                Kale chips glossier <strong>fingerstache</strong> chicharrones pop-up retro normcore af vibecession.
+                Hashtag scenester
+                skateboard semiotics freegan shaman. <br><br>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium accusantium ratione incidunt
+                distinctio consequatur itaque totam similique illum ut dolore.
+            </p>
+        </article>
+        <!-- EXPERIENCE -->
+        <article id="experience" class="article">
+            <h2 class="article-heading">Experiences</h2>
+            <div>
+                <section>
+                    <header class="experience-heading">
+                        <h3 class="experience-position">Position 1</h3>
+                        <p class="experience-period">2010 - 2024</p>
+                    </header>
+                    <p>Actually drinking vinegar seitan hell of viral brunch blackbird spyplane health goth
+                        vexillologist
+                        cliche tote bag.</p>
+                </section>
+                <section>
+                    <header class="experience-heading">
+                        <h3 class="experience-position">Position 2</h3>
+                        <p class="experience-period">2000 - 2010</p>
+                    </header>
+                    <p>Mumblecore freegan chia neutral milk hotel vaporware tonx, sriracha keffiyeh taxidermy franzen
+                        pickled mlkshk.</p>
+                </section>
+            </div>
+        </article>
+        <!-- SKILLS -->
+        <article id="skills" class="article">
+            <h2 class="article-heading">Skills</h2>
+            <div>
+                <section>
+                    <h3>Soft Skills</h3>
+                    <ul>
+                        <li>Skill 1</li>
+                        <li>Skill 2</li>
+                        <li>Skill 3</li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>Tech Skills</h3>
+                    <ul>
+                        <li>Skill 4</li>
+                        <li>Skill 5</li>
+                        <li>Skill 6</li>
+                    </ul>
+                </section>
+            </div>
+        </article>
+        <!-- CONTACT -->
+        <article id="contact" class="article">
+            <h2 class="article-heading">Contact</h2>
+            <ol>
+                <li>Address: Teststrasse 1, 12345 Hamburg</li>
+                <li>Phone: <a href="tel:012345/678910">012345/678910</a></li>
+                <li>e-mail: <a href="mailto: test@test.com">test@test.com</a></li>
+            </ol>
+        </article>
 
+    </main>
+    <footer class="footer">
+        <article class="footer-note">
+            Did you like my CV? Contact me
+        </article>
+    </footer>
 </body>
 
 </html>
